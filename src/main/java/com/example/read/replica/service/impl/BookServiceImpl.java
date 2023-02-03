@@ -40,7 +40,6 @@ public class BookServiceImpl implements BooksService {
     bookFetchedFromDB.setAuthor(request.getAuthor());
     primaryRepository.save(bookFetchedFromDB);
     return Optional.ofNullable(primaryRepository.findById(request.getId())).orElseThrow().get();
-
   }
 
   @Override
